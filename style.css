@@ -52,7 +52,7 @@ body {
     padding: 20px clamp(16px, 3vw, 32px);
     border-radius: 26px;
     background: radial-gradient(circle at top left, rgba(148, 163, 184, 0.14), transparent 60%),
-                linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.94));
+        linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.94));
     box-shadow: var(--shadow-soft);
     backdrop-filter: blur(26px);
     -webkit-backdrop-filter: blur(26px);
@@ -106,7 +106,7 @@ body {
     padding: 4px;
     border-radius: 999px;
     background: radial-gradient(circle at top left, rgba(148, 163, 184, 0.4), transparent 60%),
-                linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.9));
+        linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.9));
     border: 1px solid rgba(148, 163, 184, 0.5);
     box-shadow: 0 10px 30px rgba(15, 23, 42, 0.7);
 }
@@ -181,7 +181,7 @@ body {
     pointer-events: none;
 }
 
-.card > * {
+.card>* {
     position: relative;
     z-index: 1;
 }
@@ -366,3 +366,157 @@ h3 {
 #save-nick-btn:active {
     transform: translateY(0);
     box-shadow:
+}
+
+
+/* ==== РАЗДЕЛ ПРАВИЛ ==== */
+
+.rules-card {
+    padding-top: 24px;
+    padding-bottom: 20px;
+}
+
+.rules-header {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 18px;
+}
+
+.rules-header h2 {
+    margin-bottom: 0;
+}
+
+.rules-header p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* Сетка блоков правил */
+
+.rules-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+@media (max-width: 800px) {
+    .rules-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Карточка отдельного правила */
+
+.rule-block {
+    position: relative;
+    border-radius: var(--radius-md);
+    padding: 14px 14px 14px 14px;
+    background:
+        radial-gradient(circle at top left, rgba(148, 163, 184, 0.32), transparent 75%),
+        radial-gradient(circle at bottom right, rgba(56, 189, 248, 0.24), transparent 70%);
+    border: 1px solid rgba(148, 163, 184, 0.7);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.9);
+}
+
+.rule-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 8px;
+    border-radius: 999px;
+    background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.9), rgba(168, 85, 247, 0.95));
+    box-shadow:
+        0 0 0 1px rgba(15, 23, 42, 0.9),
+        0 10px 20px rgba(56, 189, 248, 0.8);
+    margin-bottom: 8px;
+}
+
+.rule-number {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #0b1120;
+}
+
+.rule-tag {
+    font-size: 0.76rem;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #e5e7eb;
+}
+
+/* Заголовки и текст внутри правил */
+
+.rule-title {
+    font-size: 0.98rem;
+    margin-bottom: 8px;
+    color: #e5e7eb;
+}
+
+.rule-text {
+    font-size: 0.9rem;
+    color: var(--text-main);
+    line-height: 1.55;
+}
+
+.rule-subtitle {
+    margin-top: 8px;
+    margin-bottom: 2px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+}
+
+/* Нумерованный список 1.x внутри блока 1 */
+
+.rule-list {
+    list-style: none;
+    margin-top: 6px;
+    padding-left: 0;
+    counter-reset: subrule;
+}
+
+.rule-list li {
+    position: relative;
+    padding-left: 32px;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+    color: var(--text-main);
+}
+
+.rule-list li::before {
+    counter-increment: subrule;
+    content: "1." counter(subrule);
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #a5b4fc;
+    padding: 2px 6px;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.9);
+    box-shadow: 0 0 0 1px rgba(129, 140, 248, 0.7);
+}
+
+/* Подвал раздела правил */
+
+.rules-footer {
+    margin-top: 6px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(148, 163, 184, 0.5);
+}
+
+.rules-footer h3 {
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+}
+
+.rules-footer p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
