@@ -520,3 +520,143 @@ h3 {
     font-size: 0.9rem;
     color: var(--text-muted);
 }
+
+.intro-section {
+    max-width: 1100px;
+    margin: 0 auto 4rem;
+    padding: 2rem 1.5rem;
+}
+
+.intro-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.intro-tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    opacity: 0.85;
+}
+
+.intro-title {
+    font-size: 2.2rem;
+    margin: 0.8rem 0 0.4rem;
+}
+
+.intro-subtitle {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.accent {
+    color: var(--accent-color, #ff9de7);
+    font-weight: 600;
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    gap: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+.intro-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 1rem;
+    padding: 1.3rem 1.4rem;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(14px);
+}
+
+.intro-card h2,
+.intro-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.7rem;
+}
+
+.intro-card p {
+    margin: 0.3rem 0 0.5rem;
+    line-height: 1.6;
+}
+
+.intro-list {
+    margin: 0.4rem 0 0;
+    padding-left: 1.1rem;
+    font-size: 0.98rem;
+}
+
+.intro-list li {
+    margin-bottom: 0.3rem;
+}
+
+.intro-list.numbered {
+    list-style: decimal;
+}
+
+.intro-card-image {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    /* фиксируем форму бокса */
+}
+
+.intro-card-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+.intro-image-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 180px;
+    border-radius: 1rem;
+    border: 1px dashed rgba(255, 255, 255, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+.intro-rules,
+.intro-howto,
+.intro-contact {
+    margin-top: 2rem;
+}
+
+.intro-howto-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.intro-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--accent-color, #ff9de7);
+}
+
+.intro-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+    .intro-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .intro-section {
+        padding: 1.5rem 1rem;
+    }
+
+    .intro-title {
+        font-size: 1.8rem;
+    }
+}
