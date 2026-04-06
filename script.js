@@ -4,7 +4,7 @@ const statusDiv = document.getElementById('status');
 
 function showStatus(message, isError = false) {
     statusDiv.textContent = message;
-    statusDiv.className = isError ? 'error' : 'success';
+    statusDiv.className = isError ? 'status-message error' : 'status-message success';
 }
 
 function loadNickname() {

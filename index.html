@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minecraft Server - Главная</title>
-    <link rel="stylesheet" href="style.css?v=4">
+    <title>Kissersk • Minecraft Server</title>
+    <link rel="stylesheet" href="style.css?v=5">
 </head>
 
 <body>
     <div class="bg-gradient"></div>
+    <div class="particles"></div>
 
     <div class="page-shell">
         <header class="top-bar">
@@ -18,258 +19,258 @@
                 <span class="logo-text">Kissersk</span>
             </div>
             <nav class="tabs" aria-label="Навигация по разделам">
-                <button class="tab-btn active" data-tab="tab-overview">Главная</button>
-                <button class="tab-btn" data-tab="tab-rules">Правила</button>
-                <button class="tab-btn" data-tab="tab-features">Фишки</button>
-                <button class="tab-btn" data-tab="tab-nick">Ваш ник</button>
+                <button class="tab-btn active" data-tab="tab-overview">
+                    <span class="tab-icon">🏠</span>
+                    <span class="tab-label">Главная</span>
+                </button>
+                <button class="tab-btn" data-tab="tab-features">
+                    <span class="tab-icon">✨</span>
+                    <span class="tab-label">Фишки</span>
+                </button>
+                <button class="tab-btn" data-tab="tab-rules">
+                    <span class="tab-icon">📜</span>
+                    <span class="tab-label">Правила</span>
+                </button>
+                <button class="tab-btn" data-tab="tab-join">
+                    <span class="tab-icon">🎮</span>
+                    <span class="tab-label">Присоединиться</span>
+                </button>
             </nav>
         </header>
 
         <main class="content">
             <!-- Вкладка: Главная -->
             <section class="tab-panel active" id="tab-overview">
-                <section class="intro-section">
-                    <div class="intro-header">
-                        <span class="intro-tag">✧ Minecraft сервер ✧</span>
-                        <h1 class="intro-title">Фембой Хаб от Feni4ka_</h1>
-                        <p class="intro-subtitle">
-                            Уютный <span class="accent">Minecraft Paper 1.21.11</span> для тех, кто хочет чиллить,
-                            строить и
-                            болтать
-                            в тёплой фембой‑атмосфере.
+                <div class="hero-section">
+                    <div class="hero-content">
+                        <span class="hero-badge">✧ Minecraft Paper 1.21.11 ✧</span>
+                        <h1 class="hero-title">Фембой Хаб от Feni4ka_</h1>
+                        <p class="hero-description">
+                            Уютный сервер для тех, кто хочет чиллить, строить и болтать в тёплой фембой‑атмосфере
                         </p>
-                    </div>
-
-                    <div class="intro-grid">
-                        <div class="intro-card intro-card-text">
-                            <h2>Что это за сервер?</h2>
-                            <p>
-                                Сервер, созданный стримером <span class="accent">Feni4ka</span> — милым
-                                фембойчик‑бойкиссером с Twitch:
-                                только ламповый вайб, уютные постройки и расслабленное общение.
-                            </p>
-                            <p>
-                                Идеально, если ты фанат стрима, любишь фембой эстетику или просто
-                                ищешь комфортное место, где можно зайти после учёбы/работы и
-                                спокойно провести вечер с единомышленниками.
-                            </p>
-                        </div>
-
-                        <div class="intro-card intro-card-image">
-                            <!-- ТУТ ТВОЯ КАРТИНКА СЕРВЕРА / СПАВНА -->
-                            <div class="intro-image-placeholder">
-                                <img src="https://i.ibb.co/kgJSnTtg/2026-01-25-23-27-53.png" alt="Спавн сервера">
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">24/7</div>
+                                <div class="stat-label">Онлайн</div>
                             </div>
-                            <!-- пример:
-      <img src="https://example.com/your-image.jpg" alt="Спавн сервера">
-      -->
-                        </div>
-                    </div>
-
-                    <div class="intro-grid">
-                        <div class="intro-card">
-                            <h2>Атмосфера и активности</h2>
-                            <ul class="intro-list">
-                                <li>совместный чилл, крафт и строительство красивых баз;</li>
-                                <li>лайтовые мини‑игры и ивенты от админов и Feni4ka;</li>
-                                <li>общение в чате, уютные компании и фембой вайб;</li>
-                                <li>voice чат опционален — хочешь сидишь в войсе, хочешь пишешь в текст.</li>
-                            </ul>
-                        </div>
-
-                        <div class="intro-card intro-card-image">
-                            <!-- ТУТ КАРТИНКА С ФЕНИ / АРТ / ФАНАРТ -->
-                            <div class="intro-image-placeholder">
-                                <img src="https://i.ibb.co/k2mCg8cH/111.png" alt="Фенечка">
+                            <div class="stat-item">
+                                <div class="stat-value">∞</div>
+                                <div class="stat-label">Вайб</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">100%</div>
+                                <div class="stat-label">Уют</div>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="intro-rules">
-                        <h2>Правила в двух словах</h2>
+                <div class="content-grid">
+                    <div class="feature-card large">
+                        <div class="card-icon">🎭</div>
+                        <h2>Что это за сервер?</h2>
                         <p>
-                            Полные правила смотрите в Discord‑канале <span class="accent">📒-правила-📒</span> —
-                            обязательно прочитайте их перед подачей заявки, нарушение ведёт к бану.
+                            Сервер, созданный стримером <span class="accent">Feni4ka</span> — милым
+                            фембойчик‑бойкиссером с Twitch: только ламповый вайб, уютные постройки и расслабленное общение.
                         </p>
                         <p>
-                            Если коротко: <span class="accent">уважение</span> ко всем, без гриферства, хейта, спама и
-                            навязывания.
-                            Играть комфортно должны и вы, и остальные.
+                            Идеально, если ты фанат стрима, любишь фембой эстетику или просто
+                            ищешь комфортное место, где можно зайти после учёбы/работы и
+                            спокойно провести вечер с единомышленниками.
                         </p>
                     </div>
 
-                    <div class="intro-howto">
-                        <h2>Как попасть на сервер</h2>
-
-                        <div class="intro-grid intro-howto-grid">
-                            <div class="intro-card">
-                                <h3>Через баллы на Twitch (бесплатно)</h3>
-                                <ol class="intro-list numbered">
-                                    <li>Смотри стримы <span class="accent">Feni4ka</span> на Twitch.</li>
-                                    <li>Накопи <span class="accent">3000 баллов</span> канала.</li>
-                                    <li>Купи проходку в магазине Twitch‑канала.</li>
-                                </ol>
-                                <a class="intro-link" href="https://www.twitch.tv/feni4ka_" target="_blank">
-                                    twitch.tv/feni4ka_
-                                </a>
-                            </div>
-
-                            <div class="intro-card">
-                                <h3>Через донат</h3>
-                                <p>
-                                    Если не хочешь ждать — можно взять проходку сразу:
-                                </p>
-                                <p>
-                                    <span class="accent">300 рублей</span> — мгновенная покупка доступа на сервер.
-                                </p>
-                            </div>
+                    <div class="image-card">
+                        <img src="https://i.ibb.co/kgJSnTtg/2026-01-25-23-27-53.png" alt="Спавн сервера">
+                        <div class="image-overlay">
+                            <span class="image-label">Спавн сервера</span>
                         </div>
                     </div>
 
-                    <div class="intro-contact">
-                        <h2>После покупки проходки</h2>
-                        <p>
-                            Напишите в Telegram‑канал:
-                        </p>
-                        <a class="intro-link" href="https://t.me/AbyssFeni4ka" target="_blank">
-                            t.me/AbyssFeni4ka
-                        </a>
-                        <p>
-                            Укажите свой <span class="accent">Twitch‑ник</span> и <span
-                                class="accent">Minecraft‑ник</span>.
-                            Админ добавит вас в whitelist в течение 24 часов и отправит IP сервера.
-                        </p>
-                        <p>
-                            Дальше — просто заходите по IP, залетайте на спавн и чиллим вместе ♡
-                        </p>
-                    </div>
-                </section> <!-- .intro-section -->
-            </section> <!-- .tab-panel#tab-overview -->
-
-            <!-- Вкладка: Правила -->
-            <section class="tab-panel" id="tab-rules">
-                <div class="card rules-card">
-                    <div class="rules-header">
-                        <h2>Основные правила сервера</h2>
-                        <p>Пожалуйста, внимательно ознакомьтесь перед игрой.</p>
+                    <div class="image-card">
+                        <img src="https://i.ibb.co/k2mCg8cH/111.png" alt="Фенечка">
+                        <div class="image-overlay">
+                            <span class="image-label">Feni4ka</span>
+                        </div>
                     </div>
 
-                    <div class="rules-grid">
-
-                        <!-- Блок 1 -->
-                        <article class="rule-block">
-                            <div class="rule-badge">
-                                <span class="rule-number">1</span>
-                                <span class="rule-tag">Гриферство</span>
-                            </div>
-                            <h3 class="rule-title">Запрещено гриферство в любом его виде</h3>
-                            <ol class="rule-list level1">
-                                <li>Запрещено строительство на чужой территории без согласия владельца.</li>
-                                <li>Запрещена постройка непристойных изображений: пенисы, свастика, NSFW-контент и т.п.
-                                </li>
-                                <li>Запрещено намеренное уродование ландшафта возле чужих построек и спавна (рытьё ям,
-                                    заливка лавой/водой).</li>
-                                <li>Убийство игрока без его согласия считается гриферством. PvP разрешено только по
-                                    обоюдному согласию сторон.</li>
-                            </ol>
-                        </article>
-
-                        <!-- Блок 2 -->
-                        <article class="rule-block">
-                            <div class="rule-badge">
-                                <span class="rule-number">2</span>
-                                <span class="rule-tag">Стабильность</span>
-                            </div>
-                            <h3 class="rule-title">Запрещено мешать работе сервера</h3>
-                            <p class="rule-text">
-                                Запрещено препятствие нормальной работе сервера: создание лаг-машин, дюп-машин,
-                                использование багов для обрушения сервера, чанк-банны и т.п.
-                            </p>
-                        </article>
-
-                        <!-- Блок 3 -->
-                        <article class="rule-block">
-                            <div class="rule-badge">
-                                <span class="rule-number">3</span>
-                                <span class="rule-tag">Моды</span>
-                            </div>
-                            <h3 class="rule-title">Запрещены чит-моды</h3>
-                            <p class="rule-text">
-                                Запрещено использование любых клиент-модов, дающих преимущество над другими игроками.
-                            </p>
-                            <div class="rule-subtitle">Исключения:</div>
-                            <p class="rule-text">
-                                Мини-карта, моды на оптимизацию игры (Sodium, Vulkan и т.п.), Гамма, Replay Mod,
-                                Схематика + Принтер.
-                            </p>
-                        </article>
-
-                        <!-- Блок 4 -->
-                        <article class="rule-block">
-                            <div class="rule-badge">
-                                <span class="rule-number">4</span>
-                                <span class="rule-tag">Экономика</span>
-                            </div>
-                            <h3 class="rule-title">Запрещён дюп ценных предметов</h3>
-                            <p class="rule-text">
-                                Запрещен дюп ценных предметов, влияющих на экономику сервера.
-                            </p>
-                            <div class="rule-subtitle">Исключения:</div>
-                            <p class="rule-text">
-                                TNT-машины, ковры, песок, гравий и подобные строительные/технические блоки.
-                            </p>
-                        </article>
-
-                    </div>
-
-                    <div class="rules-footer">
-                        <h3>Наказание</h3>
-                        <p>
-                            Наказание за нарушения правил зависит от тяжести проступка и выносится
-                            по усмотрению администрации.
-                        </p>
+                    <div class="feature-card">
+                        <div class="card-icon">🌸</div>
+                        <h2>Атмосфера</h2>
+                        <ul class="feature-list">
+                            <li>Совместный чилл и строительство</li>
+                            <li>Лайтовые мини‑игры и ивенты</li>
+                            <li>Уютное общение и фембой вайб</li>
+                            <li>Voice чат опционален</li>
+                        </ul>
                     </div>
                 </div>
             </section>
-
 
             <!-- Вкладка: Фишки -->
             <section class="tab-panel" id="tab-features">
-                <div class="card">
-                    <h2>Фишки сервера</h2>
-                    <ul class="feature-grid">
-                        <li class="feature-item">
-                            <h3>Фишка №1</h3>
-                            <p>BreweryX: Пивоварня — крафт алкоголя, ферментация, бочки для зелий и RPG-атмосферы.</p>
-                        </li>
-                        <li class="feature-item">
-                            <h3>Фишка №2</h3>
-                            <p>FenMagnit: Кастомный предмет с вардена — магнитит все предметы прямо в инвентарь.</p>
-                        </li>
-                        <li class="feature-item">
-                            <h3>Фишка №3</h3>
-                            <p>GSit: Позы и сидение — /sit, /lay</p>
-                        </li>
-                        <li class="feature-item">
-                            <h3>Фишка №4</h3>
-                            <p>LeashPlayers: Позволяет посадить фембойчика на поводок</p>
-                        </li>
-                    </ul>
+                <div class="section-header">
+                    <h1 class="section-title">Фишки сервера</h1>
+                    <p class="section-subtitle">Уникальные возможности для комфортной игры</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-box">
+                        <div class="feature-icon">🍺</div>
+                        <h3>BreweryX</h3>
+                        <p>Пивоварня — крафт алкоголя, ферментация, бочки для зелий и RPG-атмосферы</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-icon">🧲</div>
+                        <h3>FenMagnit</h3>
+                        <p>Кастомный предмет с вардена — магнитит все предметы прямо в инвентарь</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-icon">🪑</div>
+                        <h3>GSit</h3>
+                        <p>Позы и сидение — /sit, /lay для максимального чилла</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-icon">🔗</div>
+                        <h3>LeashPlayers</h3>
+                        <p>Позволяет посадить фембойчика на поводок</p>
+                    </div>
                 </div>
             </section>
 
-            <!-- Вкладка: Ник -->
-            <section class="tab-panel" id="tab-nick">
-                <div class="card">
-                    <h2>Ваш ник в Minecraft</h2>
-                    <p class="card-description">
-                        Введи свой ник, чтобы мы добавили тебя в Whitelist
-                    </p>
-                    <div class="nick-form">
-                        <input type="text" id="mc-nick" placeholder="Введите ваш ник">
-                        <button id="save-nick-btn">Сохранить ник</button>
+            <!-- Вкладка: Правила -->
+            <section class="tab-panel" id="tab-rules">
+                <div class="section-header">
+                    <h1 class="section-title">Правила сервера</h1>
+                    <p class="section-subtitle">Внимательно ознакомьтесь перед игрой</p>
+                </div>
+
+                <div class="rules-container">
+                    <div class="rule-card">
+                        <div class="rule-header">
+                            <span class="rule-number">01</span>
+                            <span class="rule-tag">Гриферство</span>
+                        </div>
+                        <h3>Запрещено гриферство в любом его виде</h3>
+                        <ul class="rule-points">
+                            <li>Запрещено строительство на чужой территории без согласия владельца</li>
+                            <li>Запрещена постройка непристойных изображений: пенисы, свастика, NSFW-контент и т.п.</li>
+                            <li>Запрещено намеренное уродование ландшафта возле чужих построек и спавна</li>
+                            <li>Убийство игрока без его согласия считается гриферством. PvP только по обоюдному согласию</li>
+                        </ul>
                     </div>
-                    <div id="status" class="status-placeholder"></div>
+
+                    <div class="rule-card">
+                        <div class="rule-header">
+                            <span class="rule-number">02</span>
+                            <span class="rule-tag">Стабильность</span>
+                        </div>
+                        <h3>Запрещено мешать работе сервера</h3>
+                        <p>Запрещено препятствие нормальной работе сервера: создание лаг-машин, дюп-машин, использование багов для обрушения сервера, чанк-банны и т.п.</p>
+                    </div>
+
+                    <div class="rule-card">
+                        <div class="rule-header">
+                            <span class="rule-number">03</span>
+                            <span class="rule-tag">Моды</span>
+                        </div>
+                        <h3>Запрещены чит-моды</h3>
+                        <p>Запрещено использование любых клиент-модов, дающих преимущество над другими игроками.</p>
+                        <div class="rule-exception">
+                            <strong>Исключения:</strong> Мини-карта, моды на оптимизацию игры (Sodium, Vulkan и т.п.), Гамма, Replay Mod, Схематика + Принтер.
+                        </div>
+                    </div>
+
+                    <div class="rule-card">
+                        <div class="rule-header">
+                            <span class="rule-number">04</span>
+                            <span class="rule-tag">Экономика</span>
+                        </div>
+                        <h3>Запрещён дюп ценных предметов</h3>
+                        <p>Запрещен дюп ценных предметов, влияющих на экономику сервера.</p>
+                        <div class="rule-exception">
+                            <strong>Исключения:</strong> TNT-машины, ковры, песок, гравий и подобные строительные/технические блоки.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rules-notice">
+                    <div class="notice-icon">⚠️</div>
+                    <div class="notice-content">
+                        <h3>Наказание</h3>
+                        <p>Наказание за нарушения правил зависит от тяжести проступка и выносится по усмотрению администрации.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Вкладка: Присоединиться -->
+            <section class="tab-panel" id="tab-join">
+                <div class="section-header">
+                    <h1 class="section-title">Как присоединиться</h1>
+                    <p class="section-subtitle">Выбери удобный способ получить доступ</p>
+                </div>
+
+                <div class="join-methods">
+                    <div class="method-card">
+                        <div class="method-icon">💜</div>
+                        <h3>Через баллы на Twitch</h3>
+                        <p class="method-badge">Бесплатно</p>
+                        <ol class="method-steps">
+                            <li>Смотри стримы <span class="accent">Feni4ka</span> на Twitch</li>
+                            <li>Накопи <span class="accent">3000 баллов</span> канала</li>
+                            <li>Купи проходку в магазине Twitch‑канала</li>
+                        </ol>
+                        <a class="method-link" href="https://www.twitch.tv/feni4ka_" target="_blank">
+                            Перейти на Twitch →
+                        </a>
+                    </div>
+
+                    <div class="method-card highlight">
+                        <div class="method-icon">⚡</div>
+                        <h3>Через донат</h3>
+                        <p class="method-badge">Мгновенно</p>
+                        <div class="price-tag">300 рублей</div>
+                        <p>Мгновенная покупка доступа на сервер без ожидания</p>
+                    </div>
+                </div>
+
+                <div class="join-steps">
+                    <h2>После покупки проходки</h2>
+                    <div class="steps-grid">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Напиши в Telegram</h4>
+                                <a class="telegram-link" href="https://t.me/AbyssFeni4ka" target="_blank">
+                                    @AbyssFeni4ka
+                                </a>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Укажи свои ники</h4>
+                                <p>Twitch‑ник и Minecraft‑ник</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Получи доступ</h4>
+                                <p>В течение 24 часов</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nick-section">
+                    <h2>Сохрани свой ник</h2>
+                    <p>Чтобы не забыть при подаче заявки</p>
+                    <div class="nick-form">
+                        <input type="text" id="mc-nick" placeholder="Твой Minecraft ник">
+                        <button id="save-nick-btn">Сохранить</button>
+                    </div>
+                    <div id="status" class="status-message"></div>
                 </div>
             </section>
         </main>
@@ -277,12 +278,12 @@
         <footer class="footer">
             <span>© 2026 Kissersk</span>
             <span class="dot-separator">•</span>
+            <span>Femboi Hub</span>
         </footer>
     </div>
 
     <script src="script.js"></script>
     <script>
-        // Простая логика переключения вкладок на чистом JS
         const tabButtons = document.querySelectorAll('.tab-btn');
         const tabPanels = document.querySelectorAll('.tab-panel');
 
