@@ -20,6 +20,7 @@
     --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.9);
     --transition-fast: 0.2s ease-out;
     --transition-normal: 0.3s ease;
+    --accent-color: #ff9de7;
 }
 
 /* Градиентный фон и оболочка страницы */
@@ -365,7 +366,7 @@ h3 {
 
 #save-nick-btn:active {
     transform: translateY(0);
-    box-shadow:
+    box-shadow: 0 6px 16px rgba(56, 189, 248, 0.5);
 }
 
 
@@ -602,7 +603,9 @@ h3 {
 .intro-card-image {
     position: relative;
     aspect-ratio: 16 / 9;
-    /* фиксируем форму бокса */
+    overflow: hidden;
+    padding: 0;
+    border-radius: 1rem;
 }
 
 .intro-card-image img {
@@ -610,19 +613,15 @@ h3 {
     height: 100%;
     border-radius: 1rem;
     object-fit: cover;
+    display: block;
 }
 
 .intro-image-placeholder {
     width: 100%;
     height: 100%;
-    min-height: 180px;
     border-radius: 1rem;
-    border: 1px dashed rgba(255, 255, 255, 0.25);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.85rem;
-    opacity: 0.7;
+    overflow: hidden;
+    display: block;
 }
 
 .intro-rules,
