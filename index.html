@@ -65,8 +65,8 @@
                     </div>
                 </div>
 
-                <div class="content-grid">
-                    <div class="feature-card large">
+                <div class="overview-grid">
+                    <div class="overview-card main-info">
                         <div class="card-icon">🎭</div>
                         <h2>Что это за сервер?</h2>
                         <p>
@@ -80,21 +80,7 @@
                         </p>
                     </div>
 
-                    <div class="image-card">
-                        <img src="https://i.ibb.co/kgJSnTtg/2026-01-25-23-27-53.png" alt="Спавн сервера">
-                        <div class="image-overlay">
-                            <span class="image-label">Спавн сервера</span>
-                        </div>
-                    </div>
-
-                    <div class="image-card">
-                        <img src="https://i.ibb.co/k2mCg8cH/111.png" alt="Фенечка">
-                        <div class="image-overlay">
-                            <span class="image-label">Feni4ka</span>
-                        </div>
-                    </div>
-
-                    <div class="feature-card">
+                    <div class="overview-card atmosphere">
                         <div class="card-icon">🌸</div>
                         <h2>Атмосфера</h2>
                         <ul class="feature-list">
@@ -103,6 +89,22 @@
                             <li>Уютное общение и фембой вайб</li>
                             <li>Voice чат опционален</li>
                         </ul>
+                    </div>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-card">
+                        <img src="https://i.ibb.co/kgJSnTtg/2026-01-25-23-27-53.png" alt="Спавн сервера">
+                        <div class="gallery-overlay">
+                            <span class="gallery-label">Спавн сервера</span>
+                        </div>
+                    </div>
+
+                    <div class="gallery-card">
+                        <img src="https://i.ibb.co/k2mCg8cH/111.png" alt="Фенечка">
+                        <div class="gallery-overlay">
+                            <span class="gallery-label">Feni4ka</span>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -206,71 +208,154 @@
             <!-- Вкладка: Присоединиться -->
             <section class="tab-panel" id="tab-join">
                 <div class="section-header">
-                    <h1 class="section-title">Как присоединиться</h1>
-                    <p class="section-subtitle">Выбери удобный способ получить доступ</p>
+                    <h1 class="section-title">Присоединиться к серверу</h1>
+                    <p class="section-subtitle">Получи доступ и начни играть</p>
                 </div>
 
-                <div class="join-methods">
-                    <div class="method-card">
-                        <div class="method-icon">💜</div>
-                        <h3>Через баллы на Twitch</h3>
-                        <p class="method-badge">Бесплатно</p>
-                        <ol class="method-steps">
-                            <li>Смотри стримы <span class="accent">Feni4ka</span> на Twitch</li>
-                            <li>Накопи <span class="accent">3000 баллов</span> канала</li>
-                            <li>Купи проходку в магазине Twitch‑канала</li>
-                        </ol>
-                        <a class="method-link" href="https://www.twitch.tv/feni4ka_" target="_blank">
-                            Перейти на Twitch →
-                        </a>
-                    </div>
-
-                    <div class="method-card highlight">
-                        <div class="method-icon">⚡</div>
-                        <h3>Через донат</h3>
-                        <p class="method-badge">Мгновенно</p>
-                        <div class="price-tag">300 рублей</div>
-                        <p>Мгновенная покупка доступа на сервер без ожидания</p>
+                <!-- Блок авторизации -->
+                <div id="auth-section" class="auth-container">
+                    <div class="auth-card">
+                        <div class="auth-icon">🎮</div>
+                        <h2>Войди через Twitch</h2>
+                        <p>Для покупки доступа необходимо авторизоваться</p>
+                        <button id="twitch-login-btn" class="twitch-btn">
+                            <span class="twitch-icon">📺</span>
+                            Войти через Twitch
+                        </button>
                     </div>
                 </div>
 
-                <div class="join-steps">
-                    <h2>После покупки проходки</h2>
-                    <div class="steps-grid">
-                        <div class="step-item">
-                            <div class="step-number">1</div>
-                            <div class="step-content">
-                                <h4>Напиши в Telegram</h4>
-                                <a class="telegram-link" href="https://t.me/AbyssFeni4ka" target="_blank">
-                                    @AbyssFeni4ka
+                <!-- Блок после авторизации -->
+                <div id="user-section" class="user-container" style="display: none;">
+                    <div class="user-info-card">
+                        <div class="user-avatar">
+                            <img id="user-avatar" src="" alt="Avatar">
+                        </div>
+                        <div class="user-details">
+                            <h3 id="user-name">Username</h3>
+                            <p class="user-points">Баллы канала: <span id="user-points">0</span></p>
+                        </div>
+                        <button id="logout-btn" class="logout-btn">Выйти</button>
+                    </div>
+
+                    <!-- Проверка покупки -->
+                    <div id="purchase-check" class="purchase-status">
+                        <div class="status-loading">
+                            <div class="spinner"></div>
+                            <p>Проверяем статус доступа...</p>
+                        </div>
+                    </div>
+
+                    <!-- Если доступ уже есть -->
+                    <div id="access-granted" class="access-card" style="display: none;">
+                        <div class="access-icon">✅</div>
+                        <h2>У вас есть доступ!</h2>
+                        <p>Ваш Minecraft ник: <span id="mc-nickname" class="accent">Не указан</span></p>
+                        <div class="server-info">
+                            <h3>IP сервера:</h3>
+                            <div class="ip-box">
+                                <code id="server-ip">kissersk.mc.server</code>
+                                <button id="copy-ip-btn" class="copy-btn">Копировать</button>
+                            </div>
+                        </div>
+                        <div class="nick-update">
+                            <input type="text" id="update-nick" placeholder="Обновить Minecraft ник">
+                            <button id="update-nick-btn" class="update-btn">Обновить</button>
+                        </div>
+                    </div>
+
+                    <!-- Если доступа нет - показываем варианты покупки -->
+                    <div id="purchase-options" class="purchase-container" style="display: none;">
+                        <h2>Выбери способ получения доступа</h2>
+                        
+                        <div class="purchase-methods">
+                            <!-- Покупка за баллы -->
+                            <div class="purchase-card points-card">
+                                <div class="purchase-icon">💜</div>
+                                <h3>За баллы канала</h3>
+                                <div class="purchase-price">3000 баллов</div>
+                                <p>Бесплатно для зрителей стрима</p>
+                                <div class="points-info">
+                                    <p>У вас: <span id="current-points" class="accent">0</span> баллов</p>
+                                </div>
+                                <button id="buy-with-points-btn" class="purchase-btn" disabled>
+                                    Недостаточно баллов
+                                </button>
+                                <a href="https://www.twitch.tv/feni4ka_" target="_blank" class="earn-link">
+                                    Смотреть стримы и зарабатывать →
                                 </a>
                             </div>
-                        </div>
-                        <div class="step-item">
-                            <div class="step-number">2</div>
-                            <div class="step-content">
-                                <h4>Укажи свои ники</h4>
-                                <p>Twitch‑ник и Minecraft‑ник</p>
-                            </div>
-                        </div>
-                        <div class="step-item">
-                            <div class="step-number">3</div>
-                            <div class="step-content">
-                                <h4>Получи доступ</h4>
-                                <p>В течение 24 часов</p>
+
+                            <!-- Покупка за деньги -->
+                            <div class="purchase-card money-card highlight">
+                                <div class="purchase-badge">Популярно</div>
+                                <div class="purchase-icon">⚡</div>
+                                <h3>Мгновенная покупка</h3>
+                                <div class="purchase-price">300 ₽</div>
+                                <p>Получи доступ прямо сейчас</p>
+                                <button id="buy-with-money-btn" class="purchase-btn primary">
+                                    Купить доступ
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="nick-section">
-                    <h2>Сохрани свой ник</h2>
-                    <p>Чтобы не забыть при подаче заявки</p>
-                    <div class="nick-form">
-                        <input type="text" id="mc-nick" placeholder="Твой Minecraft ник">
-                        <button id="save-nick-btn">Сохранить</button>
+                <!-- Модальное окно оплаты -->
+                <div id="payment-modal" class="modal" style="display: none;">
+                    <div class="modal-overlay"></div>
+                    <div class="modal-content">
+                        <button class="modal-close" id="close-modal">&times;</button>
+                        <h2>Выберите способ оплаты</h2>
+                        <p class="modal-subtitle">Сумма: <span class="accent">300 ₽</span></p>
+
+                        <div class="payment-methods">
+                            <button class="payment-method" data-method="card">
+                                <span class="payment-icon">💳</span>
+                                <span class="payment-name">Банковская карта</span>
+                            </button>
+                            <button class="payment-method" data-method="sbp">
+                                <span class="payment-icon">📱</span>
+                                <span class="payment-name">СБП</span>
+                            </button>
+                            <button class="payment-method" data-method="yoomoney">
+                                <span class="payment-icon">💰</span>
+                                <span class="payment-name">ЮMoney</span>
+                            </button>
+                            <button class="payment-method" data-method="qiwi">
+                                <span class="payment-icon">🥝</span>
+                                <span class="payment-name">QIWI</span>
+                            </button>
+                        </div>
+
+                        <div class="minecraft-nick-input">
+                            <label for="payment-nick">Ваш Minecraft ник:</label>
+                            <input type="text" id="payment-nick" placeholder="Введите ваш ник">
+                        </div>
+
+                        <button id="confirm-payment-btn" class="confirm-payment-btn" disabled>
+                            Перейти к оплате
+                        </button>
                     </div>
-                    <div id="status" class="status-message"></div>
+                </div>
+
+                <!-- Модальное окно покупки за баллы -->
+                <div id="points-modal" class="modal" style="display: none;">
+                    <div class="modal-overlay"></div>
+                    <div class="modal-content">
+                        <button class="modal-close" id="close-points-modal">&times;</button>
+                        <h2>Покупка за баллы канала</h2>
+                        <p class="modal-subtitle">Стоимость: <span class="accent">3000 баллов</span></p>
+
+                        <div class="minecraft-nick-input">
+                            <label for="points-nick">Ваш Minecraft ник:</label>
+                            <input type="text" id="points-nick" placeholder="Введите ваш ник">
+                        </div>
+
+                        <button id="confirm-points-btn" class="confirm-payment-btn" disabled>
+                            Подтвердить покупку
+                        </button>
+                    </div>
                 </div>
             </section>
         </main>
